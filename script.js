@@ -1,5 +1,5 @@
 const API_URL =
-  'https://wj5f1tey75.execute-api.eu-central-1.amazonaws.com/dev/quotes'
+  'https://esxmdqehuyqkffdufrsj.functions.eu-central-1.nhost.run/v1'
 
 const quoteContainer = document.getElementById('quote-container')
 const quoteText = document.getElementById('quote')

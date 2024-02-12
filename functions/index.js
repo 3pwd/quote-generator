@@ -1070,23 +1070,12 @@ const data = [
 
 const getRandomInt = max => Math.floor(Math.random() * Math.floor(max))
 
-module.exports.getQuote = async event => {
+// https://docs.nhost.io/product/functions
+export default (req,res) => {
   const index = getRandomInt(data.length)
   const { quote, author, url } = data[index]
-  return {
-    statusCode: 200,
-    headers: {
-      'Access-Control-Allow-Origin': 'https://r1oga.github.io'
-    },
 
-    body: JSON.stringify(
-      {
-        quote,
-        author,
-        url
-      },
-      null,
-      2
-    )
-  }
+  res.setHeader('Access-Control-Allow-Origin', 'https://sripwoud.github.io')
+  res.status(200).json({quote, author, url})
 }
+
